@@ -1,0 +1,91 @@
+/* Navigation and layout - Member 1 */
+
+/* Header and navigation */
+.site-header {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 1rem 0;
+  display: inline-block;
+}
+
+.nav-brand:hover {
+  color: var(--primary-hover);
+}
+
+/* Navigation list - horizontal menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover state - focus for keyboard nav */
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background-color: var(--background);
+  color: var(--primary);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Active page indicator */
+.nav-menu a.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.nav-menu a.active:hover,
+.nav-menu a.active:focus {
+  background-color: var(--primary-hover);
+  color: white;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Page wrapper for sticky footer */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
