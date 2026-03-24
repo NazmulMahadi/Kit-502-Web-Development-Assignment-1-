@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Admin dashboard for EventHub">
+
+    <title>Admin Dashboard</title>
+    <div id="messageBox" class="message-box"></div>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+
+</head>
+
+
+<body>
+
+    <div class="page-wrapper">
+
+        <header class="site-header">
+
+            <div class="nav-container">
+
+                <a href="index.html" class="nav-brand">
+                    EventHub
+                </a>
+
+                <nav>
+
+                    <ul class="nav-menu">
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="register.html">Register</a></li>
+
+                        <li><a href="login.html">Login</a></li>
+
+                        <li><a href="create-event.html">Create Event</a></li>
+
+                        <li><a href="event-management.html">Event Management</a></li>
+
+                        <li><a href="admin-dashboard.html" class="active">
+
+                                Admin Dashboard
+
+                            </a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+
+        <main class="dashboard-container">
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+
+
+            <!-- Statistics -->
+
+            <section class="dashboard-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-value">
+                        24
+                    </div>
+
+                    <div class="stat-label">
+                        Total Users
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-value">
+                        8
+                    </div>
+
+                    <div class="stat-label">
+                        Total Events
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-value">
+                        5
+                    </div>
+
+                    <div class="stat-label">
+                        Upcoming Events
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-value">
+                        42
+                    </div>
+
+                    <div class="stat-label">
+                        Registrations
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Events -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <h2>
+                        Event Management
+                    </h2>
+
+                    <button class="btn btn-primary" onclick="createEvent()">
+
+                        Create Event
+
+                    </button>
+
+                </div>
+
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Title</th>
+
+                            <th>Date</th>
+
+                            <th>Organiser</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td class="event-title">
+                                Tech Summit
+                            </td>
+
+                            <td>
+                                15 April 2026
+                            </td>
+
+                            <td>
+                                John Smith
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-event">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-event">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="event-title">
+                                Music Festival
+                            </td>
+
+                            <td>
+                                22 March 2026
+                            </td>
+
+                            <td>
+                                Mary Lee
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-event">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-event">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="event-title">
+                                Cloud Expo
+                            </td>
+
+                            <td>
+                                5 May 2026
+                            </td>
+
+                            <td>
+                                David Kim
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-event">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-event">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="event-title">
+                                UX Meetup
+                            </td>
+
+                            <td>
+                                10 June 2026
+                            </td>
+
+                            <td>
+                                Sarah Chen
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-event">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-event">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+
+            <!-- Users -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <h2>
+                        User Management
+                    </h2>
+
+                    <button class="btn btn-primary" onclick="createUser()">
+
+                        Create User
+
+                    </button>
+
+                </div>
+
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Role</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td class="user-name">
+                                John Smith
+                            </td>
+
+                            <td>
+                                john@email.com
+                            </td>
+
+                            <td>
+
+                                <span class="role role-organiser">
+                                    Organiser
+                                </span>
+
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-user">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-user">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="user-name">
+                                Mary Lee
+                            </td>
+
+                            <td>
+                                mary@email.com
+                            </td>
+
+                            <td>
+
+                                <span class="role role-attendee">
+                                    Attendee
+                                </span>
+
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-user">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-user">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="user-name">
+                                System Admin
+                            </td>
+
+                            <td>
+                                admin@email.com
+                            </td>
+
+                            <td>
+
+                                <span class="role role-admin">
+                                    Admin
+                                </span>
+
+                            </td>
+
+                            <td class="admin-actions">
+
+                                <button class="btn btn-secondary edit-user">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger delete-user">
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+
+
+        <footer class="site-footer">
+
+            <p>
+                © 2026 EventHub – KIT502 Group Project
+            </p>
+
+        </footer>
+
+
+    </div>
+
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+
+</html>
